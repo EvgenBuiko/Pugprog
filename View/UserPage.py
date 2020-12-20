@@ -70,10 +70,14 @@ class Ui_Form(object):
         self.CommonEdiMode = QtWidgets.QPushButton(self.Common)
         self.CommonEdiMode.setObjectName("CommonEdiMode")
         self.verticalLayout_3.addWidget(self.CommonEdiMode)
-        self.label_2 = QtWidgets.QLabel(self.Common)
-        self.label_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label_2.setObjectName("label_2")
-        self.verticalLayout_3.addWidget(self.label_2)
+        self.IsExpertLabel = QtWidgets.QLabel(self.Common)
+        self.IsExpertLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.IsExpertLabel.setObjectName("IsExpertLabel")
+        self.verticalLayout_3.addWidget(self.IsExpertLabel)
+        self.ExpertBreed = QtWidgets.QLabel(self.Common)
+        self.ExpertBreed.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.ExpertBreed.setObjectName("ExpertBreed")
+        self.verticalLayout_3.addWidget(self.ExpertBreed)
         self.verticalLayout_2.addWidget(self.Common)
         spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout_2.addItem(spacerItem2)
@@ -90,7 +94,8 @@ class Ui_Form(object):
         self.AccountEditMode.setText(_translate("Form", "Изменить"))
         self.Common.setTitle(_translate("Form", "Профиль"))
         self.CommonEdiMode.setText(_translate("Form", "Изменить"))
-        self.label_2.setText(_translate("Form", "Является экспертом"))
+        self.IsExpertLabel.setText(_translate("Form", "Является экспертом"))
+        self.ExpertBreed.setText(_translate("Form", "Экспертная порода: "))
 
 
 if __name__ == "__main__":

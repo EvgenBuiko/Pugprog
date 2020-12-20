@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`ExhibitionUsedRings` (
   `RingID` INT UNSIGNED NOT NULL,
   `ExhibitionID` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
-  CONSTRAINT `FK_RingID`
+  CONSTRAINT `FK_UsedRingID`
     FOREIGN KEY (`RingID`)
     REFERENCES `mydb`.`Ring` (`id`)
     ON DELETE NO ACTION

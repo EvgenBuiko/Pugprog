@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`ExhibitionWinners` (
     REFERENCES `mydb`.`Dog` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `FK_ExhibitionID`
+  CONSTRAINT `FK_InExhibitionID`
     FOREIGN KEY (`ExhibitionID`)
     REFERENCES `mydb`.`Exhibition` (`id`)
     ON DELETE NO ACTION

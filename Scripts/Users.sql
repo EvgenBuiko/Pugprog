@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Users` (
   `IsAdmin` TINYINT NOT NULL,
   `DogsOwnerID` INT UNSIGNED NULL,
   PRIMARY KEY (`id`),
-  CONSTRAINT `FK_DogsOwnerID`
+  CONSTRAINT `FK_UserDogsOwnerID`
     FOREIGN KEY (`DogsOwnerID`)
     REFERENCES `mydb`.`DogsOwner` (`id`)
     ON DELETE NO ACTION
