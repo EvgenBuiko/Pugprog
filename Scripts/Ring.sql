@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS `mydb`.`Ring` ;
 
 SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `mydb`.`Ring` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL auto_increment,
   `RingName` varchar(45) not null,
   `Breed` INT NULL,
   PRIMARY KEY (`id`))

@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS `mydb`.`ExhibitionWinners` ;
 
 SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `mydb`.`ExhibitionWinners` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL auto_increment,
   `Breed` INT NULL,
   `Medal` INT NULL,
   `DogID` INT UNSIGNED NULL,

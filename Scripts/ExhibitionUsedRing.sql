@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS `mydb`.`ExhibitionUsedRings` ;
 
 SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `mydb`.`ExhibitionUsedRings` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL auto_increment,
   `RingID` INT UNSIGNED NOT NULL,
   `ExhibitionID` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),

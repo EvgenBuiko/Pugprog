@@ -11,41 +11,41 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(400, 300)
-        self.verticalLayout = QtWidgets.QVBoxLayout(Form)
+class Ui_ExhibitionWinnerPage(object):
+    def setupUi(self, ExhibitionWinnerPage):
+        ExhibitionWinnerPage.setObjectName("ExhibitionWinnerPage")
+        ExhibitionWinnerPage.resize(400, 300)
+        ExhibitionWinnerPage.setWindowTitle("")
+        self.verticalLayout = QtWidgets.QVBoxLayout(ExhibitionWinnerPage)
         self.verticalLayout.setObjectName("verticalLayout")
         spacerItem = QtWidgets.QSpacerItem(20, 10, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
         self.verticalLayout.addItem(spacerItem)
-        self.label = QtWidgets.QLabel(Form)
+        self.label = QtWidgets.QLabel(ExhibitionWinnerPage)
         font = QtGui.QFont()
         font.setPointSize(16)
         self.label.setFont(font)
         self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
-        self.ExhibitionWinnersListWidget = QtWidgets.QListWidget(Form)
+        self.ExhibitionWinnersListWidget = QtWidgets.QListWidget(ExhibitionWinnerPage)
         self.ExhibitionWinnersListWidget.setObjectName("ExhibitionWinnersListWidget")
         self.verticalLayout.addWidget(self.ExhibitionWinnersListWidget)
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem1)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(ExhibitionWinnerPage)
+        QtCore.QMetaObject.connectSlotsByName(ExhibitionWinnerPage)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, ExhibitionWinnerPage):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "Мои достижения"))
+        self.label.setText(_translate("ExhibitionWinnerPage", "Мои достижения"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
+    ExhibitionWinnerPage = QtWidgets.QWidget()
+    ui = Ui_ExhibitionWinnerPage()
+    ui.setupUi(ExhibitionWinnerPage)
+    ExhibitionWinnerPage.show()
     sys.exit(app.exec_())

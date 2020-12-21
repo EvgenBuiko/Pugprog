@@ -11,15 +11,16 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(400, 368)
-        self.verticalLayout = QtWidgets.QVBoxLayout(Form)
+class Ui_UserPage(object):
+    def setupUi(self, UserPage):
+        UserPage.setObjectName("UserPage")
+        UserPage.resize(400, 368)
+        UserPage.setWindowTitle("")
+        self.verticalLayout = QtWidgets.QVBoxLayout(UserPage)
         self.verticalLayout.setObjectName("verticalLayout")
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem)
-        self.label = QtWidgets.QLabel(Form)
+        self.label = QtWidgets.QLabel(UserPage)
         font = QtGui.QFont()
         font.setPointSize(16)
         self.label.setFont(font)
@@ -28,7 +29,7 @@ class Ui_Form(object):
         self.verticalLayout.addWidget(self.label)
         spacerItem1 = QtWidgets.QSpacerItem(20, 10, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem1)
-        self.AccountInfo = QtWidgets.QGroupBox(Form)
+        self.AccountInfo = QtWidgets.QGroupBox(UserPage)
         self.AccountInfo.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.AccountInfo.setObjectName("AccountInfo")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.AccountInfo)
@@ -83,26 +84,25 @@ class Ui_Form(object):
         self.verticalLayout_2.addItem(spacerItem2)
         self.verticalLayout.addWidget(self.AccountInfo)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(UserPage)
+        QtCore.QMetaObject.connectSlotsByName(UserPage)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, UserPage):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "Мой профиль"))
-        self.AccountInfo.setTitle(_translate("Form", "Аккаунт"))
-        self.AccountEditMode.setText(_translate("Form", "Изменить"))
-        self.Common.setTitle(_translate("Form", "Профиль"))
-        self.CommonEdiMode.setText(_translate("Form", "Изменить"))
-        self.IsExpertLabel.setText(_translate("Form", "Является экспертом"))
-        self.ExpertBreed.setText(_translate("Form", "Экспертная порода: "))
+        self.label.setText(_translate("UserPage", "Мой профиль"))
+        self.AccountInfo.setTitle(_translate("UserPage", "Аккаунт"))
+        self.AccountEditMode.setText(_translate("UserPage", "Изменить"))
+        self.Common.setTitle(_translate("UserPage", "Профиль"))
+        self.CommonEdiMode.setText(_translate("UserPage", "Изменить"))
+        self.IsExpertLabel.setText(_translate("UserPage", "Является экспертом"))
+        self.ExpertBreed.setText(_translate("UserPage", "Экспертная порода: "))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
+    UserPage = QtWidgets.QWidget()
+    ui = Ui_UserPage()
+    ui.setupUi(UserPage)
+    UserPage.show()
     sys.exit(app.exec_())

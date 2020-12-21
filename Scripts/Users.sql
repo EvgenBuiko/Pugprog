@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS `mydb`.`Users` ;
 
 SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `mydb`.`Users` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL auto_increment,
   `Login` VARCHAR(45) NOT NULL,
   `Password` VARCHAR(45) NOT NULL,
   `IsAdmin` TINYINT NOT NULL,

@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS `mydb`.`Dog` ;
 
 SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `mydb`.`Dog` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL auto_increment,
   `OwnerID` INT UNSIGNED NULL,
   `Name` VARCHAR(45) NULL,
   `Age` INT NULL,

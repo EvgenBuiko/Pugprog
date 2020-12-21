@@ -11,38 +11,39 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(480, 366)
-        self.verticalLayout = QtWidgets.QVBoxLayout(Form)
+class Ui_ExhibitionPage(object):
+    def setupUi(self, ExhibitionPage):
+        ExhibitionPage.setObjectName("ExhibitionPage")
+        ExhibitionPage.resize(480, 366)
+        ExhibitionPage.setWindowTitle("")
+        self.verticalLayout = QtWidgets.QVBoxLayout(ExhibitionPage)
         self.verticalLayout.setObjectName("verticalLayout")
         spacerItem = QtWidgets.QSpacerItem(20, 10, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
         self.verticalLayout.addItem(spacerItem)
-        self.label = QtWidgets.QLabel(Form)
+        self.label = QtWidgets.QLabel(ExhibitionPage)
         font = QtGui.QFont()
         font.setPointSize(16)
         self.label.setFont(font)
         self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
-        self.MyExhibitionsListWidget = QtWidgets.QListWidget(Form)
+        self.MyExhibitionsListWidget = QtWidgets.QListWidget(ExhibitionPage)
         self.MyExhibitionsListWidget.setMinimumSize(QtCore.QSize(0, 100))
         self.MyExhibitionsListWidget.setObjectName("MyExhibitionsListWidget")
         self.verticalLayout.addWidget(self.MyExhibitionsListWidget)
-        self.RemoveExhibitionButton = QtWidgets.QPushButton(Form)
+        self.RemoveExhibitionButton = QtWidgets.QPushButton(ExhibitionPage)
         self.RemoveExhibitionButton.setDefault(False)
         self.RemoveExhibitionButton.setFlat(False)
         self.RemoveExhibitionButton.setObjectName("RemoveExhibitionButton")
         self.verticalLayout.addWidget(self.RemoveExhibitionButton)
-        self.label_2 = QtWidgets.QLabel(Form)
+        self.label_2 = QtWidgets.QLabel(ExhibitionPage)
         font = QtGui.QFont()
         font.setPointSize(16)
         self.label_2.setFont(font)
         self.label_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_2.setObjectName("label_2")
         self.verticalLayout.addWidget(self.label_2)
-        self.AvailablExhibitionsListWidget = QtWidgets.QLineEdit(Form)
+        self.AvailablExhibitionsListWidget = QtWidgets.QLineEdit(ExhibitionPage)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -51,29 +52,28 @@ class Ui_Form(object):
         self.AvailablExhibitionsListWidget.setMinimumSize(QtCore.QSize(0, 100))
         self.AvailablExhibitionsListWidget.setObjectName("AvailablExhibitionsListWidget")
         self.verticalLayout.addWidget(self.AvailablExhibitionsListWidget)
-        self.pushButton = QtWidgets.QPushButton(Form)
+        self.pushButton = QtWidgets.QPushButton(ExhibitionPage)
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout.addWidget(self.pushButton)
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem1)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(ExhibitionPage)
+        QtCore.QMetaObject.connectSlotsByName(ExhibitionPage)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, ExhibitionPage):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "Мои выставки"))
-        self.RemoveExhibitionButton.setText(_translate("Form", "Отказаться от участия"))
-        self.label_2.setText(_translate("Form", "Доступные выставки"))
-        self.pushButton.setText(_translate("Form", "Принять участие"))
+        self.label.setText(_translate("ExhibitionPage", "Мои выставки"))
+        self.RemoveExhibitionButton.setText(_translate("ExhibitionPage", "Отказаться от участия"))
+        self.label_2.setText(_translate("ExhibitionPage", "Доступные выставки"))
+        self.pushButton.setText(_translate("ExhibitionPage", "Принять участие"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
+    ExhibitionPage = QtWidgets.QWidget()
+    ui = Ui_ExhibitionPage()
+    ui.setupUi(ExhibitionPage)
+    ExhibitionPage.show()
     sys.exit(app.exec_())

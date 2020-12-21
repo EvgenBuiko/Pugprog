@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS `mydb`.`ExibitionExperts` ;
 
 SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `mydb`.`ExibitionExperts` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL auto_increment,
   `ExpertID` INT UNSIGNED NOT NULL,
   `RingID` INT UNSIGNED NOT NULL,
   `ExibitionID` INT UNSIGNED NOT NULL,

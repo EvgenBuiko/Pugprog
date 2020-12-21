@@ -11,15 +11,16 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(418, 485)
-        self.verticalLayout = QtWidgets.QVBoxLayout(Form)
+class Ui_ClubPage(object):
+    def setupUi(self, ClubPage):
+        ClubPage.setObjectName("ClubPage")
+        ClubPage.resize(418, 485)
+        ClubPage.setWindowTitle("")
+        self.verticalLayout = QtWidgets.QVBoxLayout(ClubPage)
         self.verticalLayout.setObjectName("verticalLayout")
         spacerItem = QtWidgets.QSpacerItem(20, 10, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
         self.verticalLayout.addItem(spacerItem)
-        self.groupBox = QtWidgets.QGroupBox(Form)
+        self.groupBox = QtWidgets.QGroupBox(ClubPage)
         self.groupBox.setMinimumSize(QtCore.QSize(400, 0))
         self.groupBox.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.groupBox.setObjectName("groupBox")
@@ -56,45 +57,44 @@ class Ui_Form(object):
         self.GoOutClub.setObjectName("GoOutClub")
         self.verticalLayout_2.addWidget(self.GoOutClub)
         self.verticalLayout.addWidget(self.groupBox)
-        self.label_4 = QtWidgets.QLabel(Form)
+        self.label_4 = QtWidgets.QLabel(ClubPage)
         font = QtGui.QFont()
         font.setPointSize(16)
         self.label_4.setFont(font)
         self.label_4.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_4.setObjectName("label_4")
         self.verticalLayout.addWidget(self.label_4)
-        self.ClubListWidget = QtWidgets.QListWidget(Form)
+        self.ClubListWidget = QtWidgets.QListWidget(ClubPage)
         self.ClubListWidget.setObjectName("ClubListWidget")
         self.verticalLayout.addWidget(self.ClubListWidget)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.JoinToClubButton = QtWidgets.QPushButton(Form)
+        self.JoinToClubButton = QtWidgets.QPushButton(ClubPage)
         self.JoinToClubButton.setObjectName("JoinToClubButton")
         self.horizontalLayout.addWidget(self.JoinToClubButton)
         self.verticalLayout.addLayout(self.horizontalLayout)
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem1)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(ClubPage)
+        QtCore.QMetaObject.connectSlotsByName(ClubPage)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, ClubPage):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.groupBox.setTitle(_translate("Form", "Мой клуб"))
-        self.label.setText(_translate("Form", "Название клуба"))
-        self.label_3.setText(_translate("Form", "Количество участников "))
-        self.label_2.setText(_translate("Form", "Порода клуба"))
-        self.GoOutClub.setText(_translate("Form", "Покинуть клуб"))
-        self.label_4.setText(_translate("Form", "Клубы"))
-        self.JoinToClubButton.setText(_translate("Form", "Вступить в клуб"))
+        self.groupBox.setTitle(_translate("ClubPage", "Мой клуб"))
+        self.label.setText(_translate("ClubPage", "Название клуба"))
+        self.label_3.setText(_translate("ClubPage", "Количество участников "))
+        self.label_2.setText(_translate("ClubPage", "Порода клуба"))
+        self.GoOutClub.setText(_translate("ClubPage", "Покинуть клуб"))
+        self.label_4.setText(_translate("ClubPage", "Клубы"))
+        self.JoinToClubButton.setText(_translate("ClubPage", "Вступить в клуб"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
+    ClubPage = QtWidgets.QWidget()
+    ui = Ui_ClubPage()
+    ui.setupUi(ClubPage)
+    ClubPage.show()
     sys.exit(app.exec_())

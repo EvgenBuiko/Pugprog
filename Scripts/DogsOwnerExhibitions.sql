@@ -4,7 +4,8 @@
 drop table if exists `mydb`.`DogsOwnerExhibitions`;
 
 create table if not exists `mydb`.`DogsOwnerExhibitions` (
-	`id` int unsigned not null,
+	`id` int unsigned not null auto_increment,
+    `ParticipateClubNumber` int unsigned,
     `DogsOwnerID` int unsigned not null,
     `ExhibitionID` int unsigned not null,
     primary key ( `id` ),

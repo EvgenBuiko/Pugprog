@@ -11,15 +11,16 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(400, 420)
-        self.verticalLayout = QtWidgets.QVBoxLayout(Form)
+class Ui_DogsPage(object):
+    def setupUi(self, DogsPage):
+        DogsPage.setObjectName("DogsPage")
+        DogsPage.resize(400, 420)
+        DogsPage.setWindowTitle("")
+        self.verticalLayout = QtWidgets.QVBoxLayout(DogsPage)
         self.verticalLayout.setObjectName("verticalLayout")
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem)
-        self.label = QtWidgets.QLabel(Form)
+        self.label = QtWidgets.QLabel(DogsPage)
         font = QtGui.QFont()
         font.setPointSize(16)
         font.setBold(False)
@@ -28,10 +29,10 @@ class Ui_Form(object):
         self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
-        self.DogsListWidget = QtWidgets.QListWidget(Form)
+        self.DogsListWidget = QtWidgets.QListWidget(DogsPage)
         self.DogsListWidget.setObjectName("DogsListWidget")
         self.verticalLayout.addWidget(self.DogsListWidget)
-        self.widget = QtWidgets.QWidget(Form)
+        self.widget = QtWidgets.QWidget(DogsPage)
         self.widget.setObjectName("widget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget)
         self.horizontalLayout.setObjectName("horizontalLayout")
@@ -45,22 +46,21 @@ class Ui_Form(object):
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem1)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(DogsPage)
+        QtCore.QMetaObject.connectSlotsByName(DogsPage)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, DogsPage):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "Мои собаки"))
-        self.AddDogButton.setText(_translate("Form", "Добавить"))
-        self.RemoveDogButton.setText(_translate("Form", "Удалить"))
+        self.label.setText(_translate("DogsPage", "Мои собаки"))
+        self.AddDogButton.setText(_translate("DogsPage", "Добавить"))
+        self.RemoveDogButton.setText(_translate("DogsPage", "Удалить"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
+    DogsPage = QtWidgets.QWidget()
+    ui = Ui_DogsPage()
+    ui.setupUi(DogsPage)
+    DogsPage.show()
     sys.exit(app.exec_())

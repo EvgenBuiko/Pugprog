@@ -1,10 +1,13 @@
-from View.MainWindow import Ui_MainWindow
-from PyQt5 import QtCore, QtGui, QtWidgets
+from View.SignInUpController import SignInDialog
+from View.MainWindowController import MenuWindow
+from PyQt5 import QtWidgets
 import sys
 
 app = QtWidgets.QApplication( sys.argv )
-window = QtWidgets.QMainWindow() 
-ui = Ui_MainWindow()
-ui.setupUi( window )
-window.show()
-sys.exit( app.exec_() )
+signIn = SignInDialog()
+signIn.InitWindow()
+menu = MenuWindow()
+if signIn.Accepted == signIn.exec():
+    menu.InitWindow()
+    menu.show()
+    sys.exit( app.exec_() )

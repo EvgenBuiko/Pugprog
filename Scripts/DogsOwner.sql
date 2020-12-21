@@ -5,11 +5,10 @@ DROP TABLE IF EXISTS `mydb`.`DogsOwner` ;
 
 SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `mydb`.`DogsOwner` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL auto_increment,
   `FirstName` VARCHAR(45) NULL,
   `LastName` VARCHAR(45) NULL,
   `ClubID` INT UNSIGNED NULL,
-  `ParticipantNumber` INT UNSIGNED NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `FK_ClubID`
     FOREIGN KEY (`ClubID`)
