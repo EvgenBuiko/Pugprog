@@ -1,5 +1,7 @@
 from PyQt5.QtWidgets import QMessageBox
 from PyQt5.QtWidgets import QWidget
 
-def errCatch(err: Exception):
-    QMessageBox.information(QWidget(), 'Error', 'Error occured')
+
+def Error( title, info_text ):
+    QMessageBox.information(QWidget(), title, info_text)
+
